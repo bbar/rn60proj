@@ -1,0 +1,35 @@
+{
+  "name": "rn60proj",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest",
+    "clean": "watchman watch-del-all && rm -rf node_modules && yarn cache clean && yarn install && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*",
+    "xc": "open -a Xcode ./ios/aprn.xcworkspace",
+    "as": "open -a /Applications/Android\\ Studio.app android",
+    "pod-install": "cd ios && pod install",
+    "pod-update": "cd ios && pod update",
+    "pod-clean": "cd ios && rm -rf aprn.xcworkspace && rm Podfile.lock && pod install"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-native": "0.60.4",
+    "react-native-background-fetch": "^2.6.1",
+    "react-native-background-geolocation-android": "https://github.com/transistorsoft/react-native-background-geolocation-android.git",
+    "react-native-device-info": "^2.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/runtime": "^7.5.0",
+    "@react-native-community/eslint-config": "^0.0.3",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "metro-react-native-babel-preset": "^0.54.1",
+    "react-native-clean-project": "^3.2.4",
+    "react-test-renderer": "16.8.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
